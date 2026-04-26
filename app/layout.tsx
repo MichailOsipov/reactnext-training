@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Header } from '../components/layout/header';
+import { MainContent } from '../components/layout/mainContent';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,14 +29,19 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <div className="flex flex-col flex-1 items-center justify-center font-sans">
+          <Header />
+          <MainContent>
+            {children}
+          </MainContent>
+        </div>
+      </body>
     </html>
   );
 }
 
 // TODO
-// 4. add test routing
-// 4.1 param routing
 // 4.2 add pagination
 // 4.3 add list of products with link to the separate product
 // 5. add mock server
@@ -43,6 +50,8 @@ export default function RootLayout({
 // 8. add auth and not auth pages
 // 9. error handling
 // 10. caching?
+// 11. add inner login page without upper layout
+// 12. highlight basket-orders-itc when subpage opened
 // * try page vs app router
 // * deploying
 
@@ -53,3 +62,5 @@ export default function RootLayout({
 // 1. cleanup layout
 // 2. add ui-kit and add start layout example
 // 3. add custom themes + theme toggler
+// 4. add test routing
+// 4.1 param routing
