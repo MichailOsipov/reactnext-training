@@ -42,11 +42,13 @@ export default function RootLayout({
 }
 
 // TODO
-// 4.2 add pagination
-// 4.3 add list of products with link to the separate product
+// 4.4 add search with options
 // 5. add mock server
 // 6. add few pages with api integration with loader (all data is not preloaded)
 // 7. add few pages with api integration with loader (some data is preloaded)
+// 7.1 add orders pagination
+// 7.2 add image to products + image handling
+// 7.3 grid?
 // 8. add auth and not auth pages
 // 9. error handling
 // 10. caching?
@@ -64,3 +66,5 @@ export default function RootLayout({
 // 3. add custom themes + theme toggler
 // 4. add test routing
 // 4.1 param routing
+// 4.2 add list of products with link to the separate product
+// 4.3 add redirect to pages
